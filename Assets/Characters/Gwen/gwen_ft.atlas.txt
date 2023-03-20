@@ -1,0 +1,37 @@
+gwen_ft.png
+	size: 2048, 1024
+	filter: Linear, Linear
+arm_l_gwen_ft
+	bounds: 1878, 536, 101, 119
+arm_r_gwen_ft
+	bounds: 984, 288, 161, 143
+body_gwen_ft
+	bounds: 2, 412, 687, 596
+book_gwen_ft
+	bounds: 2, 88, 430, 322
+glass_gwen_ft
+	bounds: 1286, 307, 512, 202
+gwen_shadow_ft
+	bounds: 434, 42, 302, 368
+hand_l_gwen_ft
+	bounds: 1878, 657, 106, 351
+hand_r_gwen_ft
+	bounds: 738, 63, 244, 368
+head_gwen_ft
+	bounds: 691, 433, 593, 575
+mouth2_gwen_ft
+	bounds: 1800, 423, 86, 50
+	rotate: 90
+mouth3_gwen_ft
+	bounds: 984, 258, 70, 28
+mouth_gwen_ft
+	bounds: 1147, 403, 83, 28
+nose_gwen_ft
+	bounds: 2, 2, 122, 84
+pupil_gwen_ft
+	bounds: 1981, 593, 62, 65
+	rotate: 90
+shawl_gwen_ft
+	bounds: 1286, 511, 590, 497
+teeth_gwen_ft
+	bounds: 691, 417, 44, 14

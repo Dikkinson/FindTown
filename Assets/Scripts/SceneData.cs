@@ -1,0 +1,15 @@
+﻿using System.Collections.Generic;
+using UnityEngine;
+
+public enum TaskType { Counter, Picture, Word}
+public enum HidenObjectType { Cat, Backpack, Diary, Headphones, Doll, Player, Glasses }
+
+public class SceneData : MonoBehaviour
+{
+    public Transform sceneCameraTransform;
+    public float minCameraZoom;
+    public BoxCollider backgroundCollider;
+    public TaskType levelTaskType;
+    public List<LevelTask> levelTasks;
+}
+

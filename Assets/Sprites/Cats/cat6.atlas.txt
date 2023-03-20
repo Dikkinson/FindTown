@@ -1,0 +1,5 @@
+cat6.png
+	size: 128, 128
+	filter: Linear, Linear
+cat6_ft
+	bounds: 2, 2, 90, 109

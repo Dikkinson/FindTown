@@ -1,0 +1,5 @@
+cat7.png
+	size: 256, 128
+	filter: Linear, Linear
+cat7_ft
+	bounds: 2, 2, 128, 122

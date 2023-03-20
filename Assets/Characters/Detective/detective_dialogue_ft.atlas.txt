@@ -1,0 +1,84 @@
+detective_dialogue_ft.png
+	size: 2048, 2048
+	filter: Linear, Linear
+back_det_ft
+	bounds: 862, 425, 189, 85
+body_det_ft
+	bounds: 862, 1315, 418, 731
+cap_det_ft
+	bounds: 1214, 842, 471, 359
+	rotate: 90
+cloak_l_det_ft
+	bounds: 731, 474, 129, 1572
+cloak_r_det_ft
+	bounds: 1097, 299, 115, 1014
+collar_l_det_ft
+	bounds: 1282, 1834, 212, 745
+	rotate: 90
+collar_r_det_ft
+	bounds: 862, 512, 233, 801
+detective_shadow_ft
+	bounds: 2, 244, 341, 673
+	rotate: 90
+eye_l_det_ft
+	bounds: 1433, 315, 60, 55
+eyebrow_l_det_ft
+	bounds: 1969, 1731, 101, 53
+	rotate: 90
+eyebrow_r_det_ft
+	bounds: 50, 55, 65, 29
+eyelid_l_bot_det_ft
+	bounds: 1794, 1337, 66, 37
+eyelid_l_det_ft
+	bounds: 1832, 896, 73, 50
+	rotate: 90
+eyelid_r_bot_det_ft
+	bounds: 1969, 1663, 66, 25
+	rotate: 90
+eyelid_r_det_ft
+	bounds: 1053, 443, 67, 41
+	rotate: 90
+hand_l_det_ft
+	bounds: 1214, 372, 297, 468
+hand_r_det_ft
+	bounds: 2, 86, 156, 481
+	rotate: 90
+head_det_ft
+	bounds: 1575, 971, 315, 363
+legs__det_ft
+	bounds: 2, 587, 727, 1459
+mouth_1_det_ft
+	bounds: 1053, 421, 42, 20
+mouth_2_det_ft
+	bounds: 2, 2, 82, 46
+	rotate: 90
+mouth_in_det_ft
+	bounds: 677, 506, 79, 46
+	rotate: 90
+neck_det_ft
+	bounds: 1794, 1376, 166, 201
+nose_det_ft
+	bounds: 485, 111, 131, 168
+	rotate: 90
+nose_shadow_det_ft
+	bounds: 1513, 755, 85, 54
+	rotate: 90
+pocket_l_det_ft
+	bounds: 1575, 838, 131, 255
+	rotate: 90
+pocket_r_det_ft
+	bounds: 1214, 275, 95, 217
+	rotate: 90
+pupil_l_det_ft
+	bounds: 1513, 728, 26, 25
+shoulder_l_det_ft
+	bounds: 1282, 1579, 253, 685
+	rotate: 90
+shoulder_r_det_ft
+	bounds: 1282, 1336, 241, 510
+	rotate: 90
+teeth_down_det_ft
+	bounds: 2029, 1986, 60, 17
+	rotate: 90
+teeth_up_det_ft
+	bounds: 1282, 1319, 55, 15

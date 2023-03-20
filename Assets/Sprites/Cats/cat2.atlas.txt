@@ -1,0 +1,5 @@
+cat2.png
+	size: 128, 64
+	filter: Linear, Linear
+cat2_ft
+	bounds: 2, 2, 94, 52

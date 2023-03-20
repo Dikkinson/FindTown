@@ -1,0 +1,5 @@
+cat1.png
+	size: 256, 256
+	filter: Linear, Linear
+cat1_ft
+	bounds: 2, 2, 200, 171
