@@ -3,7 +3,6 @@ using UnityEngine;
 
 public struct CameraEcs
 {
-    public EcsEntity background;
     public Transform cameraTransform;
     public Camera camera;
     public float minCameraZoom;

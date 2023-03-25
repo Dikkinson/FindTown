@@ -9,6 +9,7 @@ public class SceneData : MonoBehaviour
     public Transform sceneCameraTransform;
     public float minCameraZoom;
     public BoxCollider backgroundCollider;
+    public DialogueScriptableObject startDialogue;
     public TaskType levelTaskType;
     public List<LevelTask> levelTasks;
 }

@@ -11,6 +11,7 @@ public class EcsStartup : MonoBehaviour
     private EcsSystems _systems;
     private EcsSystems _cameraSystems;
     private EcsSystems _hidenObjectSystems;
+    private EcsSystems _dialogueSystems;
 
     private void Start()
     {
@@ -18,12 +19,17 @@ public class EcsStartup : MonoBehaviour
         _systems = new EcsSystems(_ecsWorld);
         _cameraSystems = new EcsSystems(_ecsWorld);
         _hidenObjectSystems = new EcsSystems(_ecsWorld);
+        _dialogueSystems = new EcsSystems(_ecsWorld);
 
         RuntimeData runtimeData = new RuntimeData();
 
         _systems
             .Add(new BackgroundInitSystem())
-            .Add(new PlayerInputSystem())
+#if UNITY_WEBGL || UNITY_EDITOR
+            .Add(new MouseInputSystem())
+#else
+            .Add(new TouchInputSystem())
+#endif
             .Inject(configuration)
             .Inject(sceneData)
             .Inject(runtimeData);
@@ -48,9 +54,19 @@ public class EcsStartup : MonoBehaviour
             .Inject(runtimeData)
             .Inject(ui);
 
+        _dialogueSystems
+            .Add(new DialogueInitSystem())
+            .Add(new DialogueFlowSystem())
+            .Add(new DialogueEndSystem())
+            .Inject(configuration)
+            .Inject(sceneData)
+            .Inject(runtimeData)
+            .Inject(ui);
+
         _systems.Init();
         _cameraSystems.Init();
         _hidenObjectSystems.Init();
+        _dialogueSystems.Init();
     }
 
     private void Update()
@@ -58,6 +74,7 @@ public class EcsStartup : MonoBehaviour
         _systems?.Run();
         _cameraSystems?.Run();
         _hidenObjectSystems?.Run();
+        _dialogueSystems?.Run();
     }
 
     private void OnDestroy()
@@ -66,6 +83,10 @@ public class EcsStartup : MonoBehaviour
         _cameraSystems = null;
         _systems?.Destroy();
         _systems = null;
+        _hidenObjectSystems?.Destroy();
+        _hidenObjectSystems = null;
+        _dialogueSystems?.Destroy();
+        _dialogueSystems = null;
         _ecsWorld.Destroy();
         _ecsWorld = null;
     }

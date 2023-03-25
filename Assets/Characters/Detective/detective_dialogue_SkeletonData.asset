@@ -25,25 +25,10 @@ MonoBehaviour:
     screenMaterials: []
   skeletonDataModifiers: []
   fromAnimation:
-  - idle
-  - idle
   - dialogue
-  - dialogue
-  - shadow
-  - shadow
   toAnimation:
-  - dialogue
-  - shadow
-  - shadow
   - idle
-  - idle
-  - dialogue
   duration:
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
-  defaultMix: 0.2
+  - 2
+  defaultMix: 0
   controller: {fileID: 0}
