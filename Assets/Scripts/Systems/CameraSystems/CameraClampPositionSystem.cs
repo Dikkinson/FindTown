@@ -19,7 +19,8 @@ public class CameraClampPositionSystem : IEcsRunSystem
             move.x = Mathf.Clamp(move.x, background.xMin + camera.camWidth, background.xMax - camera.camWidth);
             move.y = Mathf.Clamp(move.y, background.yMin + camera.camHeight, background.yMax - camera.camHeight);
 
-            camera.cameraTransform.position = move;
+            if (camera.camWidth >= background.xMax) camera.cameraTransform.position = new Vector3(0,0,-10f);
+            else camera.cameraTransform.position = move;
         }
     }
 }

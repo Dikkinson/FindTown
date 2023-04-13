@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c3349596f24c254c92deccab40b4c03, type: 3}
   m_Name: StaticData
   m_EditorClassIdentifier: 
-  timeBetweenCharsDialogue: 0.05
-  dialogueIdleTime: 10
-  zoomSpeed: 2
+  timeBeforeGameStart: 0
+  zoomOutSpeed: 2
+  cameraLerpSpeed: 1
+  zoomSpeedPC: 5
+  zoomSpeedPhone: 0.4

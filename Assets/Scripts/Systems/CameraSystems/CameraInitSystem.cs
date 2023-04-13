@@ -5,6 +5,7 @@ public class CameraInitSystem : IEcsInitSystem
 {
     private EcsWorld _ecsWorld;
     private SceneData _sceneData;
+    private RuntimeData _runtimeData;
 
     public void Init()
     {
@@ -17,6 +18,11 @@ public class CameraInitSystem : IEcsInitSystem
         camera.camera = camera.cameraTransform.GetComponent<Camera>();
         camera.minCameraZoom = _sceneData.minCameraZoom;
         camera.maxCameraZoom = _sceneData.backgroundCollider.bounds.max.y;
+        camera.startPosition = camera.cameraTransform.position;
+
+        _runtimeData.cameraEntity = cameraEntity;
+
+        cameraEntity.Get<CameraZoomOut>();
     }
 }
 

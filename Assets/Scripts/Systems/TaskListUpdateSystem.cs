@@ -4,13 +4,12 @@ using System.Linq;
 
 public class TaskListUpdateSystem : IEcsRunSystem
 {
-    private EcsFilter<HidenObject, Found> _foundHidenObjectFilter;
+    private EcsFilter<HidenObject, Interaction> _foundHidenObjectFilter;
     private RuntimeData _runtimeData;
+    private UI _ui;
 
     public void Run()
     {
-        if (_runtimeData.currentState != GameState.Game) return;
-
         foreach (var i in _foundHidenObjectFilter)
         {
             ref var foundObject = ref _foundHidenObjectFilter.Get1(i);
@@ -24,11 +23,20 @@ public class TaskListUpdateSystem : IEcsRunSystem
             if (task.foundCount == task.totalCount)
             {
                 task.taskPartView.Disable();
-            }else
+                _runtimeData.taskListEntityByType.Remove(foundObject.type);
+            }
+            else
             {
                 task.taskPartView.UpdateCount(task.foundCount, task.totalCount);
             }
-            
+
+            if (_runtimeData.taskListEntityByType.Count == 0)
+            {
+                _runtimeData.CurrentState = GameState.Victory;
+
+                _ui.gameScreen.Show(false);
+                _ui.victoryScreen.Show();
+            }
         }
     }
 }

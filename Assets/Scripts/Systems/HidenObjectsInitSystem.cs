@@ -4,18 +4,22 @@ using UnityEngine;
 public class HidenObjectsInitSystem : IEcsInitSystem
 {
     private EcsWorld _ecsWorld;
+    private SceneData _sceneData;
 
     public void Init()
     {
-        foreach (var hidenObjectView in Object.FindObjectsOfType<HidenObjectView>())
+        foreach (var levelTask in _sceneData.levelTasks)
         {
-            var hidenObjectEntity = _ecsWorld.NewEntity();
+            foreach (var hidenObject in levelTask.taskObjects)
+            {
+                var hidenObjectEntity = _ecsWorld.NewEntity();
 
-            ref var hidenObject = ref hidenObjectEntity.Get<HidenObject>();
+                ref var hidenObjectComponent = ref hidenObjectEntity.Get<HidenObject>();
 
-            hidenObjectView.hidenObjectEntity = hidenObjectEntity;
-            hidenObject.animator = hidenObjectView.GetComponent<Animator>();
-            hidenObject.type = hidenObjectView.type;
+                hidenObject.hidenObjectEntity = hidenObjectEntity;
+                hidenObjectComponent.animator = hidenObject.GetComponent<Animator>();
+                hidenObjectComponent.type = levelTask.type;
+            }
         }
     }
 }

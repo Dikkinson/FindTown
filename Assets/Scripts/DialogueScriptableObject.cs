@@ -22,7 +22,7 @@ public class DialogueLine
 
     public Color BackgroundBlurColor;
     public string characterName;
-    public Vector3 cameraOffset;
+    public Vector3 cameraPosition;
     [Multiline]
     public string dialogueText;
 }

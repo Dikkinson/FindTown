@@ -3,15 +3,12 @@ using UnityEngine;
 
 public class CameraMoveSystem : IEcsRunSystem
 {
-    private EcsFilter<PlayerInputData, CameraEcs> _ecsFilter;
-    private RuntimeData _runtimeData;
+    private EcsFilter<PlayerInputData, CameraEcs>.Exclude<CameraBlock> _ecsFilter;
     private bool drag;
     private Vector3 mouseOrigin;
 
     public void Run()
     {
-        if (_runtimeData.currentState != GameState.Game) return;
-
         foreach (var i in _ecsFilter) 
         {
             ref var input = ref _ecsFilter.Get1(i);

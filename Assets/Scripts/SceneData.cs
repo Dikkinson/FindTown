@@ -12,5 +12,7 @@ public class SceneData : MonoBehaviour
     public DialogueScriptableObject startDialogue;
     public TaskType levelTaskType;
     public List<LevelTask> levelTasks;
+    public TimerType timerType;
+    public int levelTime;
 }
 

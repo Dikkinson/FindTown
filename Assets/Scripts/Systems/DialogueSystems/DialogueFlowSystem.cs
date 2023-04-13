@@ -1,64 +1,39 @@
-﻿using Leopotam.Ecs;
+﻿using DG.Tweening;
+using Leopotam.Ecs;
+using System.Collections;
 using UnityEngine;
 
 public class DialogueFlowSystem : IEcsRunSystem
 {
-    private EcsFilter<DialogueStart> _dialogueStartFilter;
-    private EcsFilter<DialogueLineStart> _dialogueLineStartFilter;
-    private EcsFilter<DialogueWriteStart> _dialogueWriteStartFilter;
-    private EcsFilter<DialogueLineEnd> _dialogueWriterDoneFilter;
+    private EcsFilter<Dialogue, DialogueStart> _dialogueFilter;
     private EcsFilter<DialogueWaitForPlayer> _dialogueWaitForPlayerFilter;
     private EcsFilter<PlayerInputData> _playerInputDataFilter;
+
     private SceneData _sceneData;
-    private StaticData _staticData;
     private RuntimeData _runtimeData;
-    private UI ui;
+    private StaticData _staticData;
+    private UI _ui;
 
     public void Run()
     {
-        if (_runtimeData.currentState != GameState.Dialogue) return;
+        if (_runtimeData.CurrentState != GameState.Dialogue) return;
 
         ref var dialogue = ref _runtimeData.dialogueEntity.Get<Dialogue>();
-        DialogueLine line = _sceneData.startDialogue.dialogueLines[dialogue.currentLineIndex];
+        ref var camera = ref _runtimeData.cameraEntity.Get<CameraEcs>();
 
-        foreach (var i in _dialogueStartFilter)
+        foreach (var i in _dialogueFilter)
         {
-            ref var entity = ref _dialogueStartFilter.GetEntity(i);
+            DialogueLine line = _sceneData.startDialogue.dialogueLines[dialogue.currentLineIndex];
 
-            entity.Del<DialogueStart>();
+            camera.cameraTransform.position = line.cameraPosition;
 
-            _runtimeData.dialogueEntity.Get<DialogueLineStart>();
-        }
+            _ui.dialogueScreen.blurMaterial.color = line.BackgroundBlurColor;
+            _ui.dialogueScreen.leftDialogueCharacter.AnimationState.SetAnimation(0, line.LeftCharacterAnimName, true);
+            _ui.dialogueScreen.rightDialogueCharacter.AnimationState.SetAnimation(0, line.RightCharacterAnimName, true);
 
-        foreach (var i in _dialogueLineStartFilter)
-        {
-            _runtimeData.dialogueEntity.Del<DialogueLineStart>();
+            _ui.dialogueScreen.dialogueText.text = $"{line.characterName}: {line.dialogueText}";
 
-            ui.dialogueScreen.blurMaterial.color = line.BackgroundBlurColor;
-            ui.dialogueScreen.leftDialogueCharacter.AnimationState.SetAnimation(0, line.LeftCharacterAnimName, true);
-            ui.dialogueScreen.rightDialogueCharacter.AnimationState.SetAnimation(0, line.RightCharacterAnimName, true);
-
-            ui.dialogueScreen.dialogueTextWriter.WriteText($"{line.characterName}: ", line.dialogueText, _staticData.timeBetweenCharsDialogue);
-
-            _runtimeData.dialogueEntity.Get<DialogueWriteStart>();
-        }
-
-        foreach (var i in _dialogueWriteStartFilter)
-        {
-            if (ui.dialogueScreen.dialogueTextWriter.IsDone)
-            {
-                _runtimeData.dialogueEntity.Del<DialogueWriteStart>();
-                _runtimeData.dialogueEntity.Get<DialogueLineEnd>();
-            }
-        }
-
-        foreach (var i in _dialogueWriterDoneFilter)
-        {
-            ui.dialogueScreen.dialogueTextWriter.WriteText($"{line.characterName}: ", line.dialogueText);
-
-            ui.dialogueScreen.leftDialogueCharacter.AnimationState.SetAnimation(0, line.LeftCharacterDialogueIdleAnim, true);
-            ui.dialogueScreen.rightDialogueCharacter.AnimationState.SetAnimation(0, line.RightCharacterDialogueIdleAnim, true);
-            _runtimeData.dialogueEntity.Del<DialogueLineEnd>();
+            _runtimeData.dialogueEntity.Del<DialogueStart>();
             _runtimeData.dialogueEntity.Get<DialogueWaitForPlayer>();
         }
 
@@ -74,18 +49,15 @@ public class DialogueFlowSystem : IEcsRunSystem
                     {
                         dialogue.currentLineIndex++;
                         _runtimeData.dialogueEntity.Del<DialogueWaitForPlayer>();
-                        _runtimeData.dialogueEntity.Get<DialogueLineStart>();
+                        _runtimeData.dialogueEntity.Get<DialogueStart>();
                     }
                     else
                     {
-                        _runtimeData.dialogueEntity.Get<DialogueEnd>();
-                        break;
+                        _ui.dialogueScreen.Show(false);
+                        _ui.gameScreen.Show();
+
+                        _runtimeData.CurrentState = GameState.Game;
                     }
-                }
-                else
-                {
-                    _runtimeData.dialogueEntity.Del<DialogueWriteStart>();
-                    _runtimeData.dialogueEntity.Get<DialogueLineEnd>();
                 }
             }
         }

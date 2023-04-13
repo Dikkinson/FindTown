@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: db1a7904898c55649ad6f286ff3833ff
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Broadway-Normal
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: e54b987d8e6e3de4198cdbb186b4100a, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -4,9 +4,10 @@ using UnityEngine;
 [CreateAssetMenu]
 public class StaticData : ScriptableObject
 {
-    public float timeBetweenCharsDialogue;
-    public float dialogueIdleTime;
-
-    public float zoomSpeed;
+    public float timeBeforeGameStart;
+    public float zoomOutSpeed;
+    public float cameraLerpSpeed;
+    public float zoomSpeedPC;
+    public float zoomSpeedPhone;
 }
 

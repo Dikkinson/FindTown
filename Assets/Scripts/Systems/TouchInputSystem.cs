@@ -3,7 +3,8 @@ using UnityEngine;
 
 public class TouchInputSystem : IEcsRunSystem
 {
-    private EcsFilter<PlayerInputData, CameraEcs> _ecsFilter;
+    private EcsFilter<PlayerInputData, CameraEcs>.Exclude<InputBlock> _ecsFilter;
+    private StaticData _staticData;
 
     public void Run()
     {
@@ -13,24 +14,33 @@ public class TouchInputSystem : IEcsRunSystem
             ref var camera = ref _ecsFilter.Get2(i);
 
             input.pointerDown = Input.touchCount == 1;
-            input.pointerDownOnce = Input.GetTouch(0).phase == TouchPhase.Began;
-            if (Input.touchCount == 0) input.mouseWorldPos = Vector2.zero;
-            else input.mouseWorldPos = camera.camera.ScreenToWorldPoint(Input.GetTouch(0).position);
+            if(Input.touchCount > 0 && Input.touchCount < 2)
+            {
+                input.pointerDownOnce = Input.GetTouch(0).phase == TouchPhase.Began;
+                input.mouseWorldPos = camera.camera.ScreenToWorldPoint(Input.GetTouch(0).position);
+                input.zoomInput = 0;
+            }
+            else
+            {
+                input.mouseWorldPos = Vector2.zero;
+                input.pointerDownOnce = false;
+            }
 
-            if (Input.touchCount < 2) input.zoomInput = 0;
+            if (Input.touchCount >= 2)
+            {
+                Touch firstTouch = Input.GetTouch(0);
+                Touch secondTouch = Input.GetTouch(1);
 
-            Touch firstTouch = Input.GetTouch(0);
-            Touch secondTouch = Input.GetTouch(1);
+                Vector2 firstTouchLastPos = firstTouch.position - firstTouch.deltaPosition;
+                Vector2 secondTouchLasPos = secondTouch.position - secondTouch.deltaPosition;
 
-            Vector2 firstTouchLastPos = firstTouch.position - firstTouch.deltaPosition;
-            Vector2 secondTouchLasPos = secondTouch.position - secondTouch.deltaPosition;
+                float distTouch = (firstTouchLastPos - secondTouchLasPos).magnitude;
+                float currentDistTouch = (firstTouch.position - secondTouch.position).magnitude;
 
-            float distTouch = (firstTouchLastPos - secondTouchLasPos).magnitude;
-            float currentDistTouch = (firstTouch.position - secondTouch.position).magnitude;
-
-            float difference = currentDistTouch - distTouch;
-
-            input.zoomInput = difference * Time.deltaTime;
+                float difference = currentDistTouch - distTouch;
+                Debug.Log(difference);
+                input.zoomInput = difference * Time.deltaTime * _staticData.zoomSpeedPhone;
+            }
         }
 
     }

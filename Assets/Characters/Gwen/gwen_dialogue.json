@@ -1,5 +1,5 @@
 {
-"skeleton": { "hash": "9QomWrqnN9s", "spine": "4.1.19", "x": -381.78, "y": -468.81, "width": 731.6, "height": 1006 },
+"skeleton": { "hash": "R6+K+mICfkg", "spine": "4.1.20", "x": -381.78, "y": -468.81, "width": 731.6, "height": 1006 },
 "bones": [
 	{ "name": "root" },
 	{ "name": "body_gwen_ft", "parent": "root", "length": 481.74, "rotation": 88.87, "x": -33.41, "y": -444.7 },
@@ -74,7 +74,7 @@
 				"glass_gwen_ft": { "x": -67.11, "y": -0.23, "rotation": -94.21, "width": 512, "height": 202 }
 			},
 			"gwen_shadow_ft": {
-				"gwen_shadow_ft": { "x": -39.13, "y": -87.69, "scaleX": 3.6086, "scaleY": 3.6086, "width": 302, "height": 368 }
+				"gwen_shadow_ft": { "x": 227.58, "y": 25.62, "scaleX": 3.2752, "scaleY": 3.2752, "width": 302, "height": 368 }
 			},
 			"hand_l_gwen_ft": {
 				"hand_l_gwen_ft": { "x": 143.8, "y": 13.16, "rotation": 112.98, "width": 106, "height": 351 }

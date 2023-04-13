@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class DialogueScreen : Screen
 {
-    public TextWriter dialogueTextWriter;
+    public Text dialogueText;
     public SkeletonGraphic leftDialogueCharacter;
     public SkeletonGraphic rightDialogueCharacter;
     public Material blurMaterial;

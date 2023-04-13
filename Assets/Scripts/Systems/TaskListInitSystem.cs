@@ -4,7 +4,7 @@ public class TaskListInitSystem : IEcsInitSystem
 {
     private EcsWorld _ecsWorld;
     private SceneData _sceneData;
-    private UI ui;
+    private UI _ui;
     private RuntimeData _runtimeData;
 
     public void Init()
@@ -13,7 +13,7 @@ public class TaskListInitSystem : IEcsInitSystem
         {
             EcsEntity levelTaskEntity = _ecsWorld.NewEntity();
 
-            var taskListItem = Object.Instantiate(ui.gameScreen.TaskViewPrefab, ui.gameScreen.TaskListParent);
+            var taskListItem = Object.Instantiate(_ui.gameScreen.TaskViewPrefab, _ui.gameScreen.TaskListParent);
             taskListItem.SetUpView(_sceneData.levelTaskType, levelTask);
             ref var levelTaskEcs = ref levelTaskEntity.Get<LevelTaskEcs>();
             levelTaskEcs.foundCount = 0;

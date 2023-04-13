@@ -5,7 +5,6 @@ public class DialogueInitSystem : IEcsInitSystem
     private EcsWorld _ecsWorld;
     private SceneData _sceneData;
     private RuntimeData _runtimeData;
-    private UI ui;
 
     public void Init()
     {
@@ -19,7 +18,7 @@ public class DialogueInitSystem : IEcsInitSystem
         _runtimeData.dialogueEntity = dialogueEntity;
 
         dialogueEntity.Get<DialogueStart>();
-        _runtimeData.currentState = GameState.Dialogue;
+        _runtimeData.CurrentState = GameState.Dialogue;
     }
 }
 

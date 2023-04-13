@@ -2,8 +2,7 @@
 
 public class HidenObjectFoundSystem : IEcsRunSystem
 {
-    private EcsFilter<HidenObject, Found> _ecsFilter;
-    private RuntimeData _runtimeData;
+    private EcsFilter<HidenObject, Interaction> _ecsFilter;
 
     public void Run()
     {
@@ -12,14 +11,8 @@ public class HidenObjectFoundSystem : IEcsRunSystem
             ref var entity = ref _ecsFilter.GetEntity(i);
             ref var hidenObject = ref _ecsFilter.Get1(i);
 
-            if (_runtimeData.currentState != GameState.Game)
-            {
-                entity.Del<Found>();
-            }else
-            {
-                hidenObject.animator.SetTrigger("Find");
-                entity.Destroy();
-            }
+            hidenObject.animator.SetTrigger("Find");
+            entity.Destroy();
         }
     }
 }
