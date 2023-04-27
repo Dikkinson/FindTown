@@ -1,0 +1,69 @@
+{
+"skeleton": { "hash": "Lf6n7LTz/TA", "spine": "4.1.20", "x": -193.05, "y": -181.93, "width": 352.33, "height": 254.11 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "phone2_main_ft", "parent": "root", "length": 174.78, "rotation": 89.22, "x": -7.83, "y": -173.68 },
+	{ "name": "bone", "parent": "phone2_main_ft", "length": 94.82, "rotation": -84.88, "x": 201.27, "y": 53.37 },
+	{ "name": "bone2", "parent": "bone", "length": 94.13, "rotation": 177.7, "x": 97.12, "y": -1.13 }
+],
+"slots": [
+	{ "name": "phone1_main_ft", "bone": "bone2", "attachment": "phone1_main_ft" },
+	{ "name": "phone2_main_ft", "bone": "phone2_main_ft", "attachment": "phone2_main_ft" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"phone1_main_ft": {
+				"phone1_main_ft": { "x": 68.78, "y": 47.92, "rotation": 177.96, "width": 329, "height": 176 }
+			},
+			"phone2_main_ft": {
+				"phone2_main_ft": { "x": 105.34, "y": -5.67, "rotation": -89.22, "width": 320, "height": 227 }
+			}
+		}
+	}
+],
+"animations": {
+	"call": {
+		"bones": {
+			"bone": {
+				"rotate": [
+					{
+						"curve": [ 0.032, 0, 0.068, 4.48 ]
+					},
+					{
+						"time": 0.1,
+						"value": 4.48,
+						"curve": [ 0.132, 4.48, 0.168, -0.2 ]
+					},
+					{ "time": 0.2, "value": -2.54 }
+				]
+			},
+			"bone2": {
+				"rotate": [
+					{
+						"time": 0.1,
+						"curve": [ 0.132, -5.14, 0.168, -15.43 ]
+					},
+					{
+						"time": 0.2,
+						"value": -15.43,
+						"curve": [ 0.232, -15.43, 0.268, 0.11 ]
+					},
+					{ "time": 0.3, "value": 0.11 }
+				]
+			},
+			"phone2_main_ft": {
+				"shear": [
+					{ "x": -2.8 },
+					{ "time": 0.0667, "x": 0.12 },
+					{ "time": 0.1333, "x": -2.8 },
+					{ "time": 0.2, "x": 0.12 },
+					{ "time": 0.2667, "x": -2.8 }
+				]
+			}
+		}
+	},
+	"idle": {}
+}
+}

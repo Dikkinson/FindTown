@@ -1,0 +1,7 @@
+phone_ft.png
+	size: 1024, 256
+	filter: Linear, Linear
+phone1_main_ft
+	bounds: 324, 53, 329, 176
+phone2_main_ft
+	bounds: 2, 2, 320, 227
