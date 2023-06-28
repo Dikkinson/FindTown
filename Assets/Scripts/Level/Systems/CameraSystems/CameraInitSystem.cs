@@ -17,7 +17,16 @@ public class CameraInitSystem : IEcsInitSystem
         camera.cameraTransform = _sceneData.sceneCameraTransform;
         camera.camera = camera.cameraTransform.GetComponent<Camera>();
         camera.minCameraZoom = _sceneData.minCameraZoom;
-        camera.maxCameraZoom = _sceneData.backgroundCollider.bounds.max.y;
+
+
+        float backgroundMaxX = _sceneData.backgroundCollider.bounds.max.x;
+        float backgroundMaxY = _sceneData.backgroundCollider.bounds.max.y;
+
+        float maxCamHeight = backgroundMaxY;
+        float maxCamWidth = camera.camera.aspect * maxCamHeight;
+
+        camera.maxCameraZoom = backgroundMaxX < maxCamWidth ? backgroundMaxX / camera.camera.aspect : backgroundMaxY;
+
         camera.startPosition = camera.cameraTransform.position;
 
         _runtimeData.cameraEntity = cameraEntity;

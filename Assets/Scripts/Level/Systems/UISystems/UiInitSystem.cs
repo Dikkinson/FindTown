@@ -1,5 +1,6 @@
 ﻿using Leopotam.Ecs;
 using UnityEngine.SceneManagement;
+using UnityEngine;
 
 public class UiInitSystem : IEcsInitSystem
 {
@@ -8,6 +9,8 @@ public class UiInitSystem : IEcsInitSystem
 
     public void Init()
     {
+        _ui.loadingWindow = Object.FindObjectOfType<LoadingWindow>();
+
         _ui.gameScreen.pauseButton.onClick.AddListener(() =>
         {
             _ecsWorld.NewEntity().Get<PauseEvent>();
@@ -20,18 +23,21 @@ public class UiInitSystem : IEcsInitSystem
 
         _ui.pauseScreen.mainMenuButton.onClick.AddListener(() =>
         {
-            SceneManager.LoadScene(0);
-        });
-
-        _ui.pauseScreen.restartButton.onClick.AddListener(() =>
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            _ui.loadingWindow.LoadLevel(0);
         });
 
         _ui.victoryScreen.continueButton.onClick.AddListener(() =>
         {
-            SceneManager.LoadScene(0);
+            _ui.loadingWindow.LoadLevel(0);
         });
+
+        if (_ui.loseScreen)
+        {
+            _ui.loseScreen.exitBtn.onClick.AddListener(() =>
+            {
+                _ui.loadingWindow.LoadLevel(0);
+            });
+        }
     }
 }
 

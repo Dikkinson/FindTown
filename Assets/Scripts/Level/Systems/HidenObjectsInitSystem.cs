@@ -1,5 +1,7 @@
 ﻿using Leopotam.Ecs;
 using UnityEngine;
+using System.Linq;
+using System.Collections.Generic;
 
 public class HidenObjectsInitSystem : IEcsInitSystem
 {
@@ -18,7 +20,17 @@ public class HidenObjectsInitSystem : IEcsInitSystem
 
                 hidenObject.hidenObjectEntity = hidenObjectEntity;
                 hidenObjectComponent.animator = hidenObject.GetComponent<Animator>();
-                hidenObjectComponent.type = levelTask.type;
+                hidenObjectComponent.itemIndex = levelTask.itemIndex;
+
+                if (_sceneData.hideSpotsList.Count == 0) continue;
+
+                var hideSpot = _sceneData.hideSpotsList.Where(x => x.hidenObjectsVariants.Contains(hidenObject.gameObject)).Where(x => x.transform.childCount == 0).ToList();
+
+                int randomIndex = Random.Range(0, hideSpot.Count);
+
+                hidenObject.transform.position = hideSpot[randomIndex].transform.position;
+                hidenObject.GetComponent<SpriteRenderer>().sortingOrder += (int)hideSpot[randomIndex].itemPosition;
+                hidenObject.transform.parent = hideSpot[randomIndex].transform;
             }
         }
     }

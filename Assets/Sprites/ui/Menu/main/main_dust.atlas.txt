@@ -1,0 +1,5 @@
+main_dust.png
+	size: 32, 16
+	filter: Linear, Linear
+dust_main_ft
+	bounds: 2, 2, 13, 12

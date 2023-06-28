@@ -6,4 +6,5 @@ public class MainMenuUI : MonoBehaviour
 {
     public PreStartWindow preStartWindow;
     public MainMenuWindow mainMenuWindow;
+    public LoadingWindow loadingWindow;
 }

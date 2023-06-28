@@ -21,20 +21,19 @@ detective_shadow_ft
 	bounds: 2, 244, 341, 673
 	rotate: 90
 eye_l_det_ft
-	bounds: 1433, 315, 60, 55
+	bounds: 50, 29, 60, 55
 eyebrow_l_det_ft
 	bounds: 1969, 1731, 101, 53
 	rotate: 90
 eyebrow_r_det_ft
-	bounds: 50, 55, 65, 29
+	bounds: 1969, 1664, 65, 29
+	rotate: 90
 eyelid_l_bot_det_ft
 	bounds: 1794, 1337, 66, 37
 eyelid_l_det_ft
-	bounds: 1832, 896, 73, 50
-	rotate: 90
+	bounds: 1433, 320, 73, 50
 eyelid_r_bot_det_ft
-	bounds: 1969, 1663, 66, 25
-	rotate: 90
+	bounds: 50, 2, 66, 25
 eyelid_r_det_ft
 	bounds: 1053, 443, 67, 41
 	rotate: 90
@@ -53,7 +52,7 @@ mouth_2_det_ft
 	bounds: 2, 2, 82, 46
 	rotate: 90
 mouth_in_det_ft
-	bounds: 677, 506, 79, 46
+	bounds: 1832, 890, 79, 46
 	rotate: 90
 neck_det_ft
 	bounds: 1794, 1376, 166, 201
@@ -70,7 +69,10 @@ pocket_r_det_ft
 	bounds: 1214, 275, 95, 217
 	rotate: 90
 pupil_l_det_ft
-	bounds: 1513, 728, 26, 25
+	bounds: 118, 2, 26, 25
+shadow_det_ft
+	bounds: 677, 432, 153, 28
+	rotate: 90
 shoulder_l_det_ft
 	bounds: 1282, 1579, 253, 685
 	rotate: 90
@@ -81,4 +83,5 @@ teeth_down_det_ft
 	bounds: 2029, 1986, 60, 17
 	rotate: 90
 teeth_up_det_ft
-	bounds: 1282, 1319, 55, 15
+	bounds: 112, 29, 55, 15
+	rotate: 90

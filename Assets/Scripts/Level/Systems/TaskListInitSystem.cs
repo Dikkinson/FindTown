@@ -18,8 +18,8 @@ public class TaskListInitSystem : IEcsInitSystem
             ref var levelTaskEcs = ref levelTaskEntity.Get<LevelTaskEcs>();
             levelTaskEcs.foundCount = 0;
             levelTaskEcs.totalCount = levelTask.taskObjects.Count;
-            levelTaskEcs.type = levelTask.type;
-            _runtimeData.taskListEntityByType.Add(levelTask.type, levelTaskEntity);
+            levelTaskEcs.itemIndex = levelTask.itemIndex;
+            _runtimeData.taskListEntityByType.Add(levelTask.itemIndex, levelTaskEntity);
             levelTaskEcs.taskPartView = taskListItem;
         }
     }

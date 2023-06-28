@@ -1,0 +1,25 @@
+map_ft.png
+	size: 2048, 1024
+	filter: Linear, Linear
+bank_icon_main_ft
+	bounds: 2, 2, 165, 165
+buildings_map_main_ft
+	bounds: 2, 349, 1230, 653
+fair_icon_main_ft
+	bounds: 1234, 834, 190, 168
+hospital_icon_main_ft
+	bounds: 1426, 862, 139, 140
+main_redot_ft
+	bounds: 185, 170, 33, 68
+	rotate: 90
+police_icon_main_ft
+	bounds: 2, 169, 181, 178
+punk_effect_ft
+	bounds: 376, 301, 12, 46
+rstation_icon_main_ft
+	bounds: 185, 205, 189, 142
+shadow_redot_main_ft
+	bounds: 1234, 532, 19, 37
+thread_main_ft
+	bounds: 1234, 571, 261, 28
+	rotate: 90

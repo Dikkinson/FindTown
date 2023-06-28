@@ -2,7 +2,7 @@
 
 public struct HidenObject
 {
-    public HidenObjectType type;
+    public int itemIndex;
     public Animator animator;
 }
 

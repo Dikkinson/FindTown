@@ -6,6 +6,7 @@ using Spine;
 
 public class MainMenuData : MonoBehaviour
 {
+    public Camera mainMenuCamera;
     public List<LevelButtonView> levelButtons;
 
     public string phoneCallAnimationName;

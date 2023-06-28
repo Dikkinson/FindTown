@@ -1,0 +1,9 @@
+quest_mark.png
+	size: 1024, 256
+	filter: Linear, Linear
+mark_main_ft
+	bounds: 610, 126, 102, 102
+peper1_phone_main_ft
+	bounds: 444, 87, 164, 141
+peper_phone_main_ft
+	bounds: 2, 2, 440, 226

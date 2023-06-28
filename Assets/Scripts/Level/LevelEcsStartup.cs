@@ -52,6 +52,7 @@ public class LevelEcsStartup : MonoBehaviour
             .Add(new CameraMoveSystem())
             .Add(new CameraCalculateSizeSystem())
             .Add(new CameraClampPositionSystem())
+            .Add(new CameraBlockSystem())
             .Inject(configuration)
             .Inject(sceneData)
             .Inject(runtimeData)

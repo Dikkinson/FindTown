@@ -1,0 +1,39 @@
+main_idle.png
+	size: 2048, 1024
+	filter: Linear, Linear
+blinds1_main_ft
+	bounds: 1525, 729, 135, 70
+blinds2_main_ft
+	bounds: 643, 128, 15, 43
+	rotate: 90
+cap_main_ft
+	bounds: 717, 192, 275, 259
+car_light_main_ft
+	bounds: 1054, 432, 425, 141
+cloak_main_ft
+	bounds: 1054, 801, 162, 699
+	rotate: 90
+dust_main_ft
+	bounds: 563, 103, 13, 12
+hanger_main_ft
+	bounds: 2, 453, 510, 1050
+	rotate: 90
+light_lamp_main_ft
+	bounds: 2, 30, 363, 7
+light_main_ft
+	bounds: 2, 145, 713, 306
+out_light_main_ft
+	bounds: 2, 2, 26, 277
+	rotate: 90
+photoap_main_ft
+	bounds: 1054, 575, 224, 469
+	rotate: 90
+window2_main_ft
+	bounds: 1755, 894, 69, 255
+	rotate: 90
+window_main_ft
+	bounds: 2, 39, 76, 559
+	rotate: 90
+window_stick_main_ft
+	bounds: 2, 117, 26, 639
+	rotate: 90

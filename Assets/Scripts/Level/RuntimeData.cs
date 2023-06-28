@@ -26,6 +26,6 @@ public class RuntimeData
     public EcsEntity dialogueEntity;
     public EcsEntity cameraEntity;
 
-    public Dictionary<HidenObjectType, EcsEntity> taskListEntityByType = new Dictionary<HidenObjectType, EcsEntity>();
+    public Dictionary<int, EcsEntity> taskListEntityByType = new Dictionary<int, EcsEntity>();
 }
 

@@ -1,0 +1,497 @@
+fileFormatVersion: 2
+guid: 980d113cc9ac90c458ed13b83d2f9913
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: bank_front_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 233
+        height: 794
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a923ec172c4334d4c8961ddae073d69c
+      internalID: 1089220770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bank_front_7
+      rect:
+        serializedVersion: 2
+        x: 4578
+        y: 0
+        width: 190
+        height: 794
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c7691c5109385f4281b64769e4dfaeb
+      internalID: -2037078541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bank_front_19
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 197
+        width: 103
+        height: 496
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37b3a9a66a026c14a95f9d65d9de1251
+      internalID: -770745626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bank_front_20
+      rect:
+        serializedVersion: 2
+        x: 1996
+        y: 195
+        width: 225
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6ff7acf2c81c9045bd2bcbb272b8326
+      internalID: 1427617635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bank_front_22
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 127
+        width: 143
+        height: 524
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fa3505a2cb42a84dbc6768cc193315d
+      internalID: -792049632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bank_front_23
+      rect:
+        serializedVersion: 2
+        x: 2511
+        y: 201
+        width: 163
+        height: 459
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58fe3a4c1b08b444cbd2a79cb2a83981
+      internalID: -1573793993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bank_front_24
+      rect:
+        serializedVersion: 2
+        x: 2751
+        y: 162
+        width: 53
+        height: 435
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0feb12631fb201f489fd57f762b3240b
+      internalID: 733834871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bank_front_26
+      rect:
+        serializedVersion: 2
+        x: 3198
+        y: 166
+        width: 53
+        height: 435
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dec4cfea25707a4fb86b3cd1b7d656b
+      internalID: 2045451421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bank_front_28
+      rect:
+        serializedVersion: 2
+        x: 3632
+        y: 166
+        width: 66
+        height: 434
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f30b1228a36f8e742b833423b04dc351
+      internalID: -964236400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bank_front_29
+      rect:
+        serializedVersion: 2
+        x: 4078
+        y: 154
+        width: 65
+        height: 476
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b74ad4ceb383554e962a7066a2f9d88
+      internalID: 1083195397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bank_front_31
+      rect:
+        serializedVersion: 2
+        x: 1235
+        y: 218
+        width: 445
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 718ecec5fd59d21478cf6adff5fd742f
+      internalID: 1485333976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bank_front_95
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 176
+        width: 120
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32b4f3da626fec148b0f0b2ae9bb6b84
+      internalID: 2035284175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      bank_front_0: 1089220770
+      bank_front_1: -168177094
+      bank_front_10: 849803478
+      bank_front_11: 1647668998
+      bank_front_12: 913419396
+      bank_front_13: -1173622500
+      bank_front_14: -1649708868
+      bank_front_15: 145385984
+      bank_front_16: -1764407124
+      bank_front_17: -1999025955
+      bank_front_18: -1846812848
+      bank_front_19: -770745626
+      bank_front_2: -1454684519
+      bank_front_20: 1427617635
+      bank_front_21: 369290200
+      bank_front_22: -792049632
+      bank_front_23: -1573793993
+      bank_front_24: 733834871
+      bank_front_25: -1567059049
+      bank_front_26: 2045451421
+      bank_front_27: -830776807
+      bank_front_28: -964236400
+      bank_front_29: 1083195397
+      bank_front_3: 412003597
+      bank_front_30: -865097631
+      bank_front_31: 1485333976
+      bank_front_32: -931825156
+      bank_front_33: 1488421068
+      bank_front_34: 846677015
+      bank_front_35: 1133830590
+      bank_front_36: -1815875368
+      bank_front_37: -297081896
+      bank_front_38: -1953342022
+      bank_front_39: -2100609135
+      bank_front_4: 832567764
+      bank_front_40: 485776092
+      bank_front_41: -2092692126
+      bank_front_42: 289737303
+      bank_front_43: -1944731646
+      bank_front_44: -1641350064
+      bank_front_45: 734759155
+      bank_front_46: -1219706144
+      bank_front_47: 1432471813
+      bank_front_48: -1223575514
+      bank_front_49: -1439252074
+      bank_front_5: 279646645
+      bank_front_50: 1408616020
+      bank_front_51: -943335364
+      bank_front_52: 77976352
+      bank_front_53: -750579929
+      bank_front_54: -376652302
+      bank_front_55: 1812941721
+      bank_front_56: 2078146836
+      bank_front_57: -853990981
+      bank_front_58: 579948066
+      bank_front_59: -1217421741
+      bank_front_6: -1571115487
+      bank_front_60: -1816576923
+      bank_front_61: -1480328831
+      bank_front_62: -1955651757
+      bank_front_63: 216209103
+      bank_front_64: 391753670
+      bank_front_65: -170285475
+      bank_front_66: 694978613
+      bank_front_67: 1506987467
+      bank_front_68: -1738709850
+      bank_front_69: 1330725341
+      bank_front_7: -2037078541
+      bank_front_70: 273370086
+      bank_front_71: 1483805654
+      bank_front_72: 1114493514
+      bank_front_73: 826135133
+      bank_front_74: 1935400817
+      bank_front_75: 51759679
+      bank_front_76: -1283167606
+      bank_front_77: -1054673435
+      bank_front_78: 515595146
+      bank_front_79: 52565693
+      bank_front_8: -372306499
+      bank_front_80: -1079180756
+      bank_front_81: 1386397932
+      bank_front_82: 1189257698
+      bank_front_83: 1430167569
+      bank_front_84: 1343750480
+      bank_front_85: 712608690
+      bank_front_86: 322368107
+      bank_front_87: 1863641761
+      bank_front_88: -422891786
+      bank_front_89: 1922289607
+      bank_front_9: 929106916
+      bank_front_90: 1140569092
+      bank_front_91: 744639053
+      bank_front_92: 561693305
+      bank_front_93: 1981941140
+      bank_front_94: 2133419811
+      bank_front_95: 2035284175
+      bank_front_96: -882954137
+      bank_front_97: 200243846
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

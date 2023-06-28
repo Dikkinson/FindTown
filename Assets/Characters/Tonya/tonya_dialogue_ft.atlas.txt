@@ -1,0 +1,65 @@
+tonya_dialogue_ft.png
+	size: 2048, 512
+	filter: Linear, Linear
+arm_r_tonya_ft
+	bounds: 1766, 379, 93, 131
+back_tonya_ft
+	bounds: 2, 121, 389, 525
+	rotate: 90
+body_tonya_ft
+	bounds: 989, 243, 267, 393
+	rotate: 90
+eye_l_tonya_ft
+	bounds: 1861, 433, 77, 77
+eye_r_tonya_ft
+	bounds: 1940, 438, 72, 72
+eyebrow_l_tonya_ft
+	bounds: 1670, 86, 93, 37
+	rotate: 90
+eyebrow_r_tonya_ft
+	bounds: 501, 43, 76, 31
+	rotate: 90
+eyelid_l_bot_tonya_ft
+	bounds: 454, 36, 83, 45
+	rotate: 90
+eyelid_l_tonya_ft
+	bounds: 1713, 219, 95, 48
+	rotate: 90
+eyelid_r_bot_tonya_ft
+	bounds: 1942, 394, 76, 42
+eyelid_r_tonya_ft
+	bounds: 1766, 331, 87, 46
+hand_l_tonya_ft
+	bounds: 1384, 181, 327, 133
+hand_r_tonya_ft
+	bounds: 297, 19, 81, 100
+head_tonya_ft
+	bounds: 529, 130, 380, 458
+	rotate: 90
+mouth_1_det_ft
+	bounds: 1713, 197, 42, 20
+mouth_2_det_ft
+	bounds: 1670, 2, 82, 46
+	rotate: 90
+mouth_in_det_ft
+	bounds: 1861, 385, 79, 46
+neck_tonya_ft
+	bounds: 1384, 316, 194, 380
+	rotate: 90
+nose_tonya_ft
+	bounds: 380, 39, 72, 80
+pupil_l_det_ft
+	bounds: 2014, 485, 26, 25
+shoulder_l_tonya_ft
+	bounds: 989, 90, 151, 390
+	rotate: 90
+shoulder_r_tonya_ft
+	bounds: 2, 9, 110, 293
+	rotate: 90
+teeth_down_det_ft
+	bounds: 380, 20, 60, 17
+teeth_up_det_ft
+	bounds: 297, 2, 55, 15
+tonya_shadow_ft
+	bounds: 1381, 39, 140, 287
+	rotate: 90

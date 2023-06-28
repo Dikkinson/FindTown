@@ -25,7 +25,7 @@ public class TaskPartView : MonoBehaviour
                 break;
             case TaskType.Picture:
                 taskImage.gameObject.SetActive(true);
-                SetImage(task.hintSprite);
+                SetImage(task.taskObjects[0].GetComponent<SpriteRenderer>().sprite);
             break;
         }
     }

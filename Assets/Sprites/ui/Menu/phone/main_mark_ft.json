@@ -1,0 +1,126 @@
+{
+"skeleton": { "hash": "MRVBdA9UTKE", "spine": "4.1.23", "x": -85.31, "y": -65.14, "width": 164.29, "height": 141.33 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "peper_phone_main_ft", "parent": "root", "length": 64.55, "rotation": 0.12, "x": 2.44, "y": 1.59 },
+	{ "name": "mark_main_ft", "parent": "root", "length": 72.91, "rotation": -90.32, "x": 526.31, "y": 527.78 },
+	{ "name": "bone9", "parent": "root", "x": 2066.3, "y": 1269.55 }
+],
+"slots": [
+	{ "name": "peper_phone_main_ft", "bone": "peper_phone_main_ft" },
+	{ "name": "peper1_phone_main_ft", "bone": "peper_phone_main_ft", "attachment": "peper1_phone_main_ft" },
+	{ "name": "mark_main_ft", "bone": "mark_main_ft" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"mark_main_ft": {
+				"mark_main_ft": { "x": 36.79, "y": -11.3, "rotation": 90.32, "width": 102, "height": 102 }
+			},
+			"peper1_phone_main_ft": {
+				"peper1_phone_main_ft": { "x": -5.6, "y": 3.95, "width": 164, "height": 141 }
+			},
+			"peper_phone_main_ft": {
+				"peper_phone_main_ft": { "x": 133.46, "y": -15.01, "rotation": -0.12, "width": 440, "height": 226 }
+			}
+		}
+	}
+],
+"animations": {
+	"mark_idle": {
+		"slots": {
+			"mark_main_ft": {
+				"attachment": [
+					{ "name": "mark_main_ft" }
+				]
+			},
+			"peper1_phone_main_ft": {
+				"attachment": [
+					{}
+				]
+			}
+		},
+		"bones": {
+			"peper_phone_main_ft": {
+				"rotate": [
+					{ "value": 58.77 }
+				],
+				"translate": [
+					{ "x": -309.83, "y": -134.55 }
+				]
+			},
+			"mark_main_ft": {
+				"rotate": [
+					{
+						"value": 10.7,
+						"curve": [ 0.556, 10.7, 1.111, 26.4 ]
+					},
+					{
+						"time": 1.6667,
+						"value": 26.4,
+						"curve": [ 2.222, 26.4, 2.778, 10.7 ]
+					},
+					{ "time": 3.3333, "value": 10.7 }
+				],
+				"translate": [
+					{ "x": -517.55, "y": -496.4 }
+				]
+			}
+		}
+	},
+	"mark_on": {
+		"slots": {
+			"mark_main_ft": {
+				"attachment": [
+					{ "name": "mark_main_ft" }
+				]
+			},
+			"peper1_phone_main_ft": {
+				"attachment": [
+					{}
+				]
+			}
+		},
+		"bones": {
+			"peper_phone_main_ft": {
+				"rotate": [
+					{ "value": 58.77 }
+				],
+				"translate": [
+					{ "x": -309.83, "y": -134.55 }
+				]
+			},
+			"mark_main_ft": {
+				"rotate": [
+					{
+						"curve": [ 0.022, 6.76, 0.044, 20.29 ]
+					},
+					{
+						"time": 0.0667,
+						"value": 20.29,
+						"curve": [ 0.156, 20.29, 0.244, 10.7 ]
+					},
+					{ "time": 0.3333, "value": 10.7 }
+				],
+				"translate": [
+					{ "x": -517.55, "y": -496.4 }
+				]
+			}
+		}
+	},
+	"peper_fly": {
+		"bones": {
+			"peper_phone_main_ft": {
+				"rotate": [
+					{ "value": 58.77 },
+					{ "time": 0.1667, "value": 241.69 }
+				],
+				"translate": [
+					{ "x": -3.13, "y": -3.11 }
+				]
+			}
+		}
+	}
+}
+}

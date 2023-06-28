@@ -17,6 +17,7 @@ public class MouseInputSystem : IEcsRunSystem
             input.mouseWorldPos = camera.camera.ScreenToWorldPoint(Input.mousePosition);
             input.pointerDown = Input.GetMouseButton(0);
             input.pointerDownOnce = Input.GetMouseButtonDown(0);
+            input.pointerUp = Input.GetMouseButtonUp(0);
         }
         
     }

@@ -22,7 +22,7 @@ public class LevelButtonsInitSystem : IEcsInitSystem
             lvlButton.buttonComponent = lvlButtonView.GetComponent<Button>();
            
             lvlButton.isOpen = false;
-            lvlButton.levelNumber = i + 1;
+            lvlButton.levelNumber = lvlButtonView.levelNumber;
             lvlButton.marker = lvlButtonView.marker;
             lvlButton.marker.SetActive(false);
             lvlButton.isOpen = false;
@@ -36,7 +36,7 @@ public class LevelButtonsInitSystem : IEcsInitSystem
                 _mainMenuUI.preStartWindow.characterNameText.text = lvlButtonView.previewCharacterName;
                 _mainMenuUI.preStartWindow.startLevelButton.onClick.AddListener(() =>
                 {
-                    SceneManager.LoadScene(i);
+                    _mainMenuUI.loadingWindow.LoadLevel(lvlButtonView.levelNumber);
                 });
                 _mainMenuUI.preStartWindow.Show();
             });

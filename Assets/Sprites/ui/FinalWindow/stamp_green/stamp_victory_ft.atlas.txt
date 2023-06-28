@@ -1,0 +1,5 @@
+stamp_victory_ft.png
+	size: 256, 256
+	filter: Linear, Linear
+positive_stamp_ft
+	bounds: 2, 2, 220, 220

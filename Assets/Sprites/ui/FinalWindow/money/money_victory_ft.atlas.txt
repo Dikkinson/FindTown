@@ -1,0 +1,5 @@
+money_victory_ft.png
+	size: 64, 64
+	filter: Linear, Linear
+money_1_vic_ft
+	bounds: 2, 2, 45, 48

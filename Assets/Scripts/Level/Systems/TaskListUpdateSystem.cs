@@ -6,6 +6,7 @@ public class TaskListUpdateSystem : IEcsRunSystem
 {
     private EcsFilter<HidenObject, Interaction> _foundHidenObjectFilter;
     private RuntimeData _runtimeData;
+    private LevelData _levelData;
     private LevelUI _ui;
 
     public void Run()
@@ -14,7 +15,7 @@ public class TaskListUpdateSystem : IEcsRunSystem
         {
             ref var foundObject = ref _foundHidenObjectFilter.Get1(i);
 
-            var taskListItem = _runtimeData.taskListEntityByType[foundObject.type];
+            var taskListItem = _runtimeData.taskListEntityByType[foundObject.itemIndex];
 
             ref var task = ref taskListItem.Get<LevelTaskEcs>();
 
@@ -23,7 +24,7 @@ public class TaskListUpdateSystem : IEcsRunSystem
             if (task.foundCount == task.totalCount)
             {
                 task.taskPartView.Disable();
-                _runtimeData.taskListEntityByType.Remove(foundObject.type);
+                _runtimeData.taskListEntityByType.Remove(foundObject.itemIndex);
             }
             else
             {
@@ -33,7 +34,7 @@ public class TaskListUpdateSystem : IEcsRunSystem
             if (_runtimeData.taskListEntityByType.Count == 0)
             {
                 _runtimeData.CurrentState = GameState.Victory;
-
+                PlayerPrefs.SetInt("OpenedLevels", _levelData.levelIndex + 1);
                 _ui.gameScreen.Show(false);
                 _ui.victoryScreen.Show();
             }

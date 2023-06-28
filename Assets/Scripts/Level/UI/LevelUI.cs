@@ -7,4 +7,5 @@ public class LevelUI : MonoBehaviour
     public PauseScreen pauseScreen;
     public VictoryScreen victoryScreen;
     public LoseScreen loseScreen;
+    public LoadingWindow loadingWindow;
 }

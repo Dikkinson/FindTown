@@ -1,0 +1,36 @@
+trans_bg_EXP.png
+	size: 2440, 2440
+	filter: Linear, Linear
+artifact1_film_ft
+	bounds: 2, 4, 7, 8
+artifact2_film_ft
+	bounds: 1427, 1038, 75, 104
+artifact3_film_ft
+	bounds: 1427, 1016, 44, 20
+artifact4_film_ft
+	bounds: 1504, 1103, 14, 39
+artifact5_film_ft
+	bounds: 1696, 1248, 84, 63
+artifact6_film_ft
+	bounds: 1696, 1222, 22, 24
+artifact7_film_ft
+	bounds: 763, 648, 55, 62
+artifact8_film_ft
+	bounds: 2, 14, 169, 47
+artifact9_film_ft
+	bounds: 843, 810, 4, 96
+bg_film_ft
+	bounds: 1782, 1289, 22, 22
+light_transition_bg_ft
+	bounds: 2, 63, 759, 843
+side1_film_ft
+	bounds: 763, 712, 78, 194
+side2_film_ft
+	bounds: 173, 39, 22, 68
+	rotate: 90
+side_film_ft
+	bounds: 1427, 1144, 267, 167
+title_transition_bg_ft
+	bounds: 2, 908, 1423, 403
+transition_bg_ft
+	bounds: 2, 1313, 2436, 1125

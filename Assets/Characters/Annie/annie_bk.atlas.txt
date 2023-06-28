@@ -1,0 +1,55 @@
+annie_bk.png
+	size: 1052, 1052
+	filter: Linear, Linear
+arm_girl_bk
+	bounds: 972, 78, 78, 160
+bant_girl_bk
+	bounds: 885, 240, 144, 176
+body
+	bounds: 351, 399, 339, 651
+brow_l_girl_bk
+	bounds: 497, 2, 48, 27
+	rotate: 90
+brow_r_girl_bk
+	bounds: 645, 61, 54, 29
+eye_l_girl_bk
+	bounds: 206, 18, 60, 72
+eye_r_girl_bk
+	bounds: 423, 30, 60, 72
+	rotate: 90
+eyelid_l_girl_bk
+	bounds: 497, 52, 72, 38
+eyelid_r_girl_bk
+	bounds: 571, 52, 72, 38
+hand_girl_bk
+	bounds: 692, 418, 128, 306
+	rotate: 90
+head_girl_bk
+	bounds: 351, 92, 305, 405
+	rotate: 90
+leg__girl_bk
+	bounds: 924, 605, 104, 445
+lip_down_girl_bk
+	bounds: 2, 3, 202, 87
+lip_up_girl_bk
+	bounds: 289, 106, 194, 56
+	rotate: 90
+mouth_girl_bk
+	bounds: 885, 57, 181, 85
+	rotate: 90
+note_girl_bk
+	bounds: 2, 92, 285, 208
+pupil_girl_bk
+	bounds: 268, 2, 28, 28
+scyrt_girl_bk
+	bounds: 2, 302, 347, 748
+shadow_det_ft
+	bounds: 268, 62, 153, 28
+shadow_girl_bk
+	bounds: 692, 548, 230, 502
+shoulder_girl_bk
+	bounds: 758, 42, 125, 374
+teeth_down_girl_bk
+	bounds: 268, 32, 99, 28
+teeth_up_girl_bk
+	bounds: 924, 558, 125, 45

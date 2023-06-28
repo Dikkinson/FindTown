@@ -20,7 +20,7 @@ public class PauseSystem : IEcsRunSystem
             }
             else
             {
-                _ui.pauseScreen.Show(false);
+                _ui.pauseScreen.animator.Play("WindowCloseAnim");
                 _runtimeData.CurrentState = _runtimeData.PreviousState;
             }
             

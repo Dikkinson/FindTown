@@ -5,8 +5,7 @@ using UnityEngine;
 public class LevelTask
 {
     public string Name;
-    public Sprite hintSprite;
-    public HidenObjectType type;
+    public int itemIndex;
     public List<HidenObjectView> taskObjects;
 }
 

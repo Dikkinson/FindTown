@@ -1,7 +1,37 @@
 phone_ft.png
-	size: 1024, 256
+	size: 2048, 512
 	filter: Linear, Linear
+dot_peper_main_ft
+	bounds: 1946, 473, 34, 37
+mark_main_ft
+	bounds: 1066, 27, 102, 102
+peper1_phone_main_ft
+	bounds: 1181, 2, 164, 141
+peper2_phone_main_ft
+	bounds: 1715, 145, 250, 201
+	rotate: 90
+peper3_phone_main_ft
+	bounds: 2, 3, 420, 213
+peper_phone_main_ft
+	bounds: 1273, 169, 440, 226
+phone1_back_main_ft
+	bounds: 1403, 118, 130, 49
 phone1_main_ft
-	bounds: 324, 53, 329, 176
+	bounds: 424, 29, 404, 182
 phone2_main_ft
-	bounds: 2, 2, 320, 227
+	bounds: 438, 213, 419, 297
+phone3_main_ft
+	bounds: 1273, 397, 560, 113
+phone4_main_ft
+	bounds: 1835, 401, 109, 109
+phone5_main_ft
+	bounds: 1347, 30, 54, 137
+phone6_main_ft
+	bounds: 830, 23, 234, 106
+phone7_main_ft
+	bounds: 859, 131, 85, 320
+	rotate: 90
+phone_green_light_main_ft
+	bounds: 2, 218, 434, 292
+phone_red_light_main_ft
+	bounds: 859, 218, 412, 292

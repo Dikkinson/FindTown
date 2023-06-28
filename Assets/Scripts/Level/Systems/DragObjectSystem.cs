@@ -8,11 +8,6 @@ internal class DragObjectSystem : IEcsRunSystem
 
     public void Run()
     {
-        if (_filter.IsEmpty())
-            _runtimeData.cameraEntity.Del<CameraBlock>();
-        else
-            _runtimeData.cameraEntity.Get<CameraBlock>();
-
         ref var playerInput = ref _runtimeData.cameraEntity.Get<PlayerInputData>();
 
         foreach (var i in _filter) 

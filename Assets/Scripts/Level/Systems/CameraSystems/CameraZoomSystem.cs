@@ -12,7 +12,6 @@ public class CameraZoomSystem : IEcsRunSystem
             ref var input = ref _ecsFilter.Get1(i);
             ref var camera = ref _ecsFilter.Get2(i);
 
-            //camera.camera.orthographicSize -= input.zoomInput;
             camera.camera.orthographicSize = Mathf.Clamp(camera.camera.orthographicSize - input.zoomInput, camera.minCameraZoom, camera.maxCameraZoom);
         }
     }

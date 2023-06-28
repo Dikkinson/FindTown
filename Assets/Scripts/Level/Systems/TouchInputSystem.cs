@@ -19,11 +19,13 @@ public class TouchInputSystem : IEcsRunSystem
                 input.pointerDownOnce = Input.GetTouch(0).phase == TouchPhase.Began;
                 input.mouseWorldPos = camera.camera.ScreenToWorldPoint(Input.GetTouch(0).position);
                 input.zoomInput = 0;
+                input.pointerUp = Input.GetTouch(0).phase == TouchPhase.Ended;
             }
             else
             {
                 input.mouseWorldPos = Vector2.zero;
                 input.pointerDownOnce = false;
+                input.pointerUp = false;
             }
 
             if (Input.touchCount >= 2)
