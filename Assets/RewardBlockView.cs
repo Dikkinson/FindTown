@@ -8,4 +8,5 @@ public class RewardBlockView : MonoBehaviour
 {
     public Slider progressBar;
     public List<SkeletonGraphic> rewardsParticles;
+    public List<Text> timeTexts;
 }

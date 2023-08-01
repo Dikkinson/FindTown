@@ -17,6 +17,7 @@ public class LevelEcsStartup : MonoBehaviour
     private EcsSystems _dragableObjectSystems;
     private EcsSystems _timerSystems;
     private EcsSystems _uiSystems;
+    private EcsSystems _rewardSystems;
 
     private void Start()
     {
@@ -29,6 +30,7 @@ public class LevelEcsStartup : MonoBehaviour
         _dragableObjectSystems = new EcsSystems(_ecsWorld);
         _timerSystems = new EcsSystems(_ecsWorld);
         _uiSystems = new EcsSystems(_ecsWorld);
+        _rewardSystems = new EcsSystems(_ecsWorld);
 
          runtimeData = new RuntimeData();
 
@@ -95,7 +97,14 @@ public class LevelEcsStartup : MonoBehaviour
             .Add(new UiInitSystem())
             .Add(new PauseSystem())
             .Inject(ui)
-            .Inject(runtimeData);
+            .Inject(runtimeData)
+            .Inject(sceneData);
+
+        _rewardSystems
+            .Add(new RewardSystem())
+            .Inject(ui)
+            .Inject(runtimeData)
+            .Inject(sceneData);
 
         _uiSystems.Init();
         _systems.Init();
@@ -104,6 +113,7 @@ public class LevelEcsStartup : MonoBehaviour
         _dialogueSystems.Init();
         _dragableObjectSystems.Init();
         _timerSystems.Init();
+        _rewardSystems.Init();
     }
 
     private void Update()
@@ -111,6 +121,7 @@ public class LevelEcsStartup : MonoBehaviour
         _uiSystems?.Run();
         _systems?.Run();
         _dialogueSystems?.Run();
+        _rewardSystems?.Run();
 
         if (runtimeData.CurrentState != GameState.Game) return;
 
@@ -142,6 +153,8 @@ public class LevelEcsStartup : MonoBehaviour
         _dragableObjectSystems = null;
         _timerSystems?.Destroy();
         _timerSystems = null;
+        _rewardSystems?.Destroy();
+        _rewardSystems = null;
         _ecsWorld.Destroy();
         _ecsWorld = null;
     }

@@ -3823,12 +3823,12 @@ MonoBehaviour:
   timerType: 0
   levelTime: 30
   levelRewardData:
-  - seconds: 180
-    rewardAmount: 10
-  - seconds: 120
-    rewardAmount: 20
+  - seconds: 90
+    rewardAmount: 100
   - seconds: 60
-    rewardAmount: 30
+    rewardAmount: 200
+  - seconds: 30
+    rewardAmount: 300
 --- !u!114 &2030076941
 MonoBehaviour:
   m_ObjectHideFlags: 0

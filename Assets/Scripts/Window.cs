@@ -15,7 +15,7 @@ public abstract class Window : MonoBehaviour
     {
         background.AnimationState.SetAnimation(0, "open_window", false);
     }
-    public void SetIdleAnim()
+    public virtual void SetIdleAnim()
     {
         background.AnimationState.SetAnimation(0, "idle_window", false);
     }

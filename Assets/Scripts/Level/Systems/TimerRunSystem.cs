@@ -6,6 +6,7 @@ public class TimerRunSystem : IEcsRunSystem
     private EcsFilter<Timer> _filter;
     private RuntimeData _runtimeData;
     private LevelUI _ui;
+    private LevelData _levelData;
 
     public void Run()
     {
@@ -13,17 +14,9 @@ public class TimerRunSystem : IEcsRunSystem
         {
             ref var timer = ref _filter.Get1(i);
 
-            switch (timer.timerType)
-            {
-                case TimerType.Forward:
-                    timer.currentTime += Time.fixedDeltaTime;
-                    break;
-                case TimerType.Backward:
-                    timer.currentTime -= Time.fixedDeltaTime;
-                    break;
-            }
+            timer.currentTime += Time.fixedDeltaTime;
 
-            if (timer.timerType == TimerType.Backward && timer.currentTime <= 0f)
+            if (timer.timerType == TimerType.Backward && timer.currentTime >= _levelData.levelTime)
             {
                 _runtimeData.CurrentState = GameState.Lose;
 
@@ -31,8 +24,10 @@ public class TimerRunSystem : IEcsRunSystem
                 _ui.loseScreen.Show();
             }
 
-            string minutesStr = string.Format("{0:00}", (int)(timer.currentTime / 60));
-            string secondsStr = string.Format("{0:00}", (int)(timer.currentTime % 60));
+            float showTime = timer.timerType == TimerType.Forward ? timer.currentTime : _levelData.levelTime - timer.currentTime;
+
+            string minutesStr = string.Format("{0:00}", (int)(showTime / 60));
+            string secondsStr = string.Format("{0:00}", (int)(showTime % 60));
 
             _ui.gameScreen.timerText.text = $"{minutesStr}:{secondsStr}";
         }

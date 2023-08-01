@@ -8,6 +8,7 @@ public class TaskListUpdateSystem : IEcsRunSystem
     private RuntimeData _runtimeData;
     private LevelData _levelData;
     private LevelUI _ui;
+    private EcsWorld _ecsWorld;
 
     public void Run()
     {
@@ -35,8 +36,10 @@ public class TaskListUpdateSystem : IEcsRunSystem
             {
                 _runtimeData.CurrentState = GameState.Victory;
                 PlayerPrefs.SetInt("OpenedLevels", _levelData.levelIndex + 1);
+
                 _ui.gameScreen.Show(false);
                 _ui.victoryScreen.Show();
+                _ecsWorld.NewEntity().Get<VictoryReward>();
             }
         }
     }

@@ -12,16 +12,7 @@ public class TimerInitSystem : IEcsInitSystem
         ref var timer = ref timerEntity.Get<Timer>();
 
         timer.timerType = _sceneData.timerType;
-
-        switch (timer.timerType)
-        {
-            case TimerType.Forward:
-                timer.currentTime = 0;
-                break;
-            case TimerType.Backward:
-                timer.currentTime = _sceneData.levelTime;
-                break;
-        }
+        timer.currentTime = 0;
     }
 }
 

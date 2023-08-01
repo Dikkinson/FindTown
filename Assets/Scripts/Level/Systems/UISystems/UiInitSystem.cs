@@ -6,6 +6,7 @@ public class UiInitSystem : IEcsInitSystem
 {
     private EcsWorld _ecsWorld;
     private LevelUI _ui;
+    private LevelData _levelData;
 
     public void Init()
     {
@@ -30,6 +31,14 @@ public class UiInitSystem : IEcsInitSystem
         {
             _ui.loadingWindow.LoadLevel(0);
         });
+
+        for (int i = 0; i < _levelData.levelRewardData.Count; i++)
+        {
+            string minutesStr = string.Format("{0:00}", (int)(_levelData.levelRewardData[i].seconds / 60f));
+            string secondsStr = string.Format("{0:00}", (int)(_levelData.levelRewardData[i].seconds % 60f));
+
+            _ui.victoryScreen.rewardBlock.timeTexts[i].text = $"{minutesStr}:{secondsStr}";
+        }
 
         if (_ui.loseScreen)
         {
